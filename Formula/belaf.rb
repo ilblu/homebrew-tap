@@ -1,25 +1,25 @@
 class Belaf < Formula
   desc "Release management CLI for monorepos"
   homepage "https://github.com/ilblu/belaf"
-  version "1.1.0"
+  version "1.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ilblu/belaf/releases/download/v1.1.0/belaf-aarch64-apple-darwin.tar.xz"
-      sha256 "dcad0815d8c1dfe3fc32889d8ce42214582cf73113383f2790000e1890d80d48"
+      url "https://github.com/ilblu/belaf/releases/download/v1.1.2/belaf-aarch64-apple-darwin.tar.xz"
+      sha256 "db45e56ae77e158f447f6da0d714f690f59cf59e61ebac9a4c63f2aa7e26eb9f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ilblu/belaf/releases/download/v1.1.0/belaf-x86_64-apple-darwin.tar.xz"
-      sha256 "2232b46d6b5d2fb2790b4a1f87845436ae227f190e49a2ad37ed773d4ad6de63"
+      url "https://github.com/ilblu/belaf/releases/download/v1.1.2/belaf-x86_64-apple-darwin.tar.xz"
+      sha256 "e551459ca63f5321725a1704989f0d76bfc198100543f1a5f93c301f4bc242a6"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ilblu/belaf/releases/download/v1.1.0/belaf-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "df8e94e22309d20a4c89cb7dac3108bc9ae8a9f5e15307a0dcedae606a2c6acf"
+      url "https://github.com/ilblu/belaf/releases/download/v1.1.2/belaf-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0d8dca6085ca3666a46cf4ef8eafeece7ba0c5ba3a5656f0d570a606366f0c2d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ilblu/belaf/releases/download/v1.1.0/belaf-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1f83a98b414791ee15e7f3a4353ea1a79b721ae52d00330392dde023e1566a7f"
+      url "https://github.com/ilblu/belaf/releases/download/v1.1.2/belaf-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "e37ffbba9c88804bf0a1b550466ddd41765f9158edcaf5f0628d647e4d6e865f"
     end
   end
   license "MIT"
@@ -62,26 +62,5 @@ class Belaf < Formula
     # Install any leftover files in pkgshare; these are probably config or
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
-  end
-
-  def caveats
-    <<~EOS
-
-      ╔══════════════════════════════════════════════════════════════╗
-      ║                                                              ║
-      ║   🚀 belaf has been installed successfully!                  ║
-      ║                                                              ║
-      ║   Get started:                                               ║
-      ║     belaf init        Initialize your repository             ║
-      ║     belaf status      View release status                    ║
-      ║     belaf prepare     Prepare a new release                  ║
-      ║                                                              ║
-      ║   Need help?                                                 ║
-      ║     belaf --help      Show all commands                      ║
-      ║     https://github.com/ilblu/belaf                           ║
-      ║                                                              ║
-      ╚══════════════════════════════════════════════════════════════╝
-
-    EOS
   end
 end
