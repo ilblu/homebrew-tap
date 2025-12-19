@@ -63,4 +63,25 @@ class Belaf < Formula
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
   end
+
+  def caveats
+    <<~EOS
+
+      ╔══════════════════════════════════════════════════════════════╗
+      ║                                                              ║
+      ║   🚀 belaf has been installed successfully!                  ║
+      ║                                                              ║
+      ║   Get started:                                               ║
+      ║     belaf init        Initialize your repository             ║
+      ║     belaf status      View release status                    ║
+      ║     belaf prepare     Prepare a new release                  ║
+      ║                                                              ║
+      ║   Need help?                                                 ║
+      ║     belaf --help      Show all commands                      ║
+      ║     https://github.com/ilblu/belaf                           ║
+      ║                                                              ║
+      ╚══════════════════════════════════════════════════════════════╝
+
+    EOS
+  end
 end
