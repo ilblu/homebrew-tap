@@ -1,25 +1,25 @@
 class Belaf < Formula
   desc "Release management CLI for monorepos"
   homepage "https://github.com/ilblu/belaf"
-  version "2.1.1"
+  version "3.0.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ilblu/belaf/releases/download/v2.1.1/belaf-aarch64-apple-darwin.tar.xz"
-      sha256 "59c810c5aac2aad7ac8304d0c4d9f479bd7eb1ecb17d58da9ea098e4256a0c43"
+      url "https://github.com/ilblu/belaf/releases/download/v3.0.0/belaf-aarch64-apple-darwin.tar.xz"
+      sha256 "6a6e07fd8b25eb6d97d1bc23940f51d89280c8d9181b982d48abf04cc932c0c5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ilblu/belaf/releases/download/v2.1.1/belaf-x86_64-apple-darwin.tar.xz"
-      sha256 "4e5f7c98c957835132b0687847640e37b295ff1ed2b8af435113ae1f6ed79736"
+      url "https://github.com/ilblu/belaf/releases/download/v3.0.0/belaf-x86_64-apple-darwin.tar.xz"
+      sha256 "fdc259072222baf2e8b86f6319d6f8309e4bc4569a13c42fca47c14058f35982"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ilblu/belaf/releases/download/v2.1.1/belaf-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "fe8cd6f8f230e5e511f575154d362a4d37b19d32d9641ac6874577adf0cc7a52"
+      url "https://github.com/ilblu/belaf/releases/download/v3.0.0/belaf-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f4454f52bb10cfdb542d7a4bf4568613c2fc15bcef39fa4e585f852e0303cc70"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ilblu/belaf/releases/download/v2.1.1/belaf-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "36fa229ca545655d001908c6a58cbbe9dd458809cbac3723b729412161bb307c"
+      url "https://github.com/ilblu/belaf/releases/download/v3.0.0/belaf-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3ed8c9ee3086fd866807bd800ed6ad9861d2f09ad9e890fcd1caaf29ae815b07"
     end
   end
   license "MIT"
