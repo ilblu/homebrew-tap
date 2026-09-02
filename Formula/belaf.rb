@@ -1,25 +1,25 @@
 class Belaf < Formula
   desc "Release management CLI for monorepos"
   homepage "https://github.com/ilblu/belaf"
-  version "4.1.0"
+  version "5.0.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ilblu/belaf/releases/download/v4.1.0/belaf-aarch64-apple-darwin.tar.xz"
-      sha256 "f89aa1e43ee3214dc5b42ec47a70255ce8adf00ed13a35b7ac1cceba6976f1aa"
+      url "https://github.com/ilblu/belaf/releases/download/v5.0.0/belaf-aarch64-apple-darwin.tar.xz"
+      sha256 "cf4fec5f4761b5b8d3735661ffcfbb896517be68bf3fe11d8ea472f4209fa62e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ilblu/belaf/releases/download/v4.1.0/belaf-x86_64-apple-darwin.tar.xz"
-      sha256 "a0bbffae7acebb6bf4c834d2fc5967be826a1e76ac8f4b6177c4a8b0889ee184"
+      url "https://github.com/ilblu/belaf/releases/download/v5.0.0/belaf-x86_64-apple-darwin.tar.xz"
+      sha256 "651d04bedda2ff70e870fff5345549df43e2f9cf38978fd6b32943ed2b37515c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ilblu/belaf/releases/download/v4.1.0/belaf-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c885bf21a38737f0f1d6884225c55265889e59a23accc7539448d826b2b44771"
+      url "https://github.com/ilblu/belaf/releases/download/v5.0.0/belaf-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "c6a95239846dbb5a81e4414b8ed6b90b545327a42d6b0ad3210da837a6059426"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ilblu/belaf/releases/download/v4.1.0/belaf-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "eaad5e99f7e41cc003efd0d23c364d9c53fe0614fcfe7306fd9ea2d046c893ec"
+      url "https://github.com/ilblu/belaf/releases/download/v5.0.0/belaf-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "237b0d1bbe290e462dd04fedd13919f4a514e7dffc892cf1b8e3e30a64ec4b89"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Belaf < Formula
   end
 
   def install
-    bin.install "belaf" if OS.mac? && Hardware::CPU.arm?
-    bin.install "belaf" if OS.mac? && Hardware::CPU.intel?
-    bin.install "belaf" if OS.linux? && Hardware::CPU.arm?
-    bin.install "belaf" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "belaf"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "belaf"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "belaf"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "belaf"
+    end
 
     install_binary_aliases!
 
